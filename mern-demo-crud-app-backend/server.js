@@ -6,7 +6,15 @@ const mongoose = require('mongoose');
 const todoRoutes = express.Router();
 
 // use port 4000 for the node.js backend
-const PORT = 4000;
+const PORT = process.env.PORT || '3046';
+
+// Angular DIST output folderknkjnj
+app.use(express.static(path.join(__dirname, 'mern-demo-crud-app-frontend && build')));
+
+// Send all other requests to the Angular app
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'mern-demo-crud-frontend && build/index.html'));
+})
 
 app.use(cors());
 app.use(bodyParser.json());
