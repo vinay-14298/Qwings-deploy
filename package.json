@@ -4,8 +4,9 @@
   "description": "MERN Demo CRUD Application",
   "main": "index.js",
   "scripts": {
-    "start": "cd mern-demo-crud-app-backend && npm start",
-        //"react-dev": "cd mern-demo-crud-app-frontend && npm start",
+    "start": 
+         
+        "react-dev": "cd mern-demo-crud-app-frontend && npm start",
         "test": "cd mern-demo-crud-app-backend && npm test",
         "preinstall": "cd mern-demo-crud-app-backend && npm install",
         "install": "cd mern-demo-crud-app-frontend && npm install",
