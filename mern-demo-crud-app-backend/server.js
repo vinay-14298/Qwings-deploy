@@ -10,11 +10,11 @@ const path = require('path');
 const PORT = process.env.PORT || '3046';
 
 // Angular DIST output folderknkjnj
-app.use(express.static(path.join(__dirname, '../mern-demo-crud-app/mern-demo-crud-app-frontend && build')));
+app.use(express.static(path.join(__dirname, 'mern-demo-crud-app-frontend && build')));
 
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build/index.html'));
+    res.sendFile(path.join(__dirname, 'mern-demo-crud-app-frontend/build/index.html'));
 })
 
 app.use(cors());
