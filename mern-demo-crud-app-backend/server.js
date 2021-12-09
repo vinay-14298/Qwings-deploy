@@ -10,7 +10,7 @@ const path = require('path');
 const PORT = process.env.PORT || '3046';
 
 // Angular DIST output folderknkjnj
-app.use(express.static(path.join(__dirname, '../ && build')));
+app.use(express.static(path.join(__dirname, '../mern-demo-crud-app && build')));
 
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {
