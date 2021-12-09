@@ -18,7 +18,7 @@ app.get('*', (req, res) => {
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use('../mern-demo-crud-app-backend');
+app.use('/mern-demo-crud-app-backend/server.js');
 
 // import the todo schema
 let Todo = require('./todo.model');
