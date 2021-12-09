@@ -4,6 +4,7 @@
   "description": "MERN Demo CRUD Application",
   "main": "index.js",
   "scripts": {
+    "cmd":"yum install npm"
     "start": 
         "cd mern-demo-crud-app-backend && npm start", 
         "react-dev": "cd mern-demo-crud-app-frontend && npm start",
