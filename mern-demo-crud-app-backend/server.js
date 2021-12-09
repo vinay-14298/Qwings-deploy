@@ -9,7 +9,7 @@ const todoRoutes = express.Router();
 const PORT = process.env.PORT || '3046';
 
 // Angular DIST output folderknkjnj
-app.use(express.static(path.join(__dirname, 'mern-demo-crud-app-frontend && build')));
+//app.use(express.static(path.join(__dirname, 'mern-demo-crud-app-frontend && build')));
 
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {
