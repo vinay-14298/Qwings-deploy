@@ -18,6 +18,7 @@ app.get('*', (req, res) => {
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use('../');
 
 // import the todo schema
 let Todo = require('./todo.model');
