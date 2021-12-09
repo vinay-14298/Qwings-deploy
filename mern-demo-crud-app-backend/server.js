@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'mern-demo-crud-app-frontend && buil
 
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'mern-demo-crud-app-frontend/build/index.html'));
+    res.sendFile(path.join(__dirname, 'build/index.html'));
 })
 
 app.use(cors());
