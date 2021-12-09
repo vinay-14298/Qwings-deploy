@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const todoRoutes = express.Router();
+const path = require('path');
 
 // use port 4000 for the node.js backend
 const PORT = process.env.PORT || '3046';
