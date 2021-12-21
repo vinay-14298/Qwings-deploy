@@ -9,7 +9,7 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install joi
       - npm install -g nodemon 
-      - node server.js 
+      - node /mern-demo-crud-app-backend/server.js 
   build:
     commands:
       - echo Build started on `date`
