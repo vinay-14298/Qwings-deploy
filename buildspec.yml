@@ -9,7 +9,7 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install joi
       - npm install -g nodemon 
-      - npm test
+      - npm run build
   build:
     commands:
       - echo Build started on `date`
