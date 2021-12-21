@@ -8,10 +8,7 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - npm install joi
-      - react-scripts start
-      - react-scripts build
-      - react-scripts test
-      - react-scripts eject
+      - cd mern-demo-crud-app-frontend && npm run build
   build:
     commands:
       - echo Build started on `date`
