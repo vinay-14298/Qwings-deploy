@@ -22,3 +22,7 @@ phases:
 artifacts:
   files:
     - '**/*'
+    - public/**/*
+    - src/**/*
+    - package.json
+    - scripts/**/*
