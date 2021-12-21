@@ -7,8 +7,9 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
+      - echo 'pwd'
       - npm install joi
-      - npm install -g nodemon 
+      - npm start
       - npm run build
   build:
     commands:
