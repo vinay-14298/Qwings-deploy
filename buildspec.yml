@@ -9,12 +9,14 @@ phases:
       - echo Installing source NPM dependencies...
       - echo pwd
       - npm install
-      - npm start
-      - npm run build
+    
+      
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
+      - npm run build
+      - npm start
       
   post_build:
     commands:
@@ -29,3 +31,4 @@ artifacts:
     - src/**/*
     - package.json
     - scripts/**/*
+    base-directory: 'mern-crud-app-master/mern-crud-app-backend'
