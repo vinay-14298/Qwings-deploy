@@ -8,7 +8,8 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - npm install joi
-      - cd mern-demo-crud-app-frontend && npm run build
+      - npm install -g nodemon 
+      - nodemon server.js 
   build:
     commands:
       - echo Build started on `date`
