@@ -8,14 +8,15 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - npm install joi
-  build:
-    commands:
-      - echo Build started on `date`
-      - echo Compiling the Node.js code
       - react-scripts start
       - react-scripts build
       - react-scripts test
       - react-scripts eject
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      
   post_build:
     commands:
       - echo Build completed on `date`
