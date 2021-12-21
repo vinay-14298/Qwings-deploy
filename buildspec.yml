@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - echo 'pwd'
-      - npm install joi
+      - npm install joi && npm audit fix --force
       - npm start
       - npm run build
   build:
