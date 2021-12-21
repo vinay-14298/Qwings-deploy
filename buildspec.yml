@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - npm install joi
-      - cd mern-demo-crud-app-backend && npm install && npm start
+      - cd mern-demo-crud-app-backend && npm start
   build:
     commands:
       - echo Build started on `date`
