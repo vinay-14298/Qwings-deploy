@@ -13,12 +13,17 @@ phases:
       - yarn install
       - echo Installing frontend dependencies
       - yarn --cwd mern-demo-crud-app-frontend install
+      - yarn --cwd mern-demo-crud-app-backend install
   build:
     commands:
       - echo Building...
       - yarn --cwd mern-demo-crud-app-frontend run build
+      - yarn --cwd mern-demo-crud-app-frontend npm start
+  post_build:
+    commands:
+      - yarn --cwd mern-demo-crud-app-backend npm start
 artifacts:
   files:
     - '**/*'
-  discard-paths: no
+  discard-paths: yes
   base-directory: mern-demo-crud-app-frontend/build
