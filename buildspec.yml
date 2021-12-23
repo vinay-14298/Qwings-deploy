@@ -2,34 +2,26 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 12
+    commands:
+      - echo Installing Node 14...
+      - curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+      - apt install -y nodejs
+      - echo Installing Yarn...
+      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+      - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+      - apt install --no-install-recommends yarn
   pre_build:
     commands:
-      - echo Installing source NPM dependencies...
-      - echo pwd
-      - npm install
-    
-      
+      - echo Installing root dependencies
+      - yarn install
+      - echo Installing frontend dependencies
+      - yarn --cwd mern-demo-crud-app-frontend install
   build:
     commands:
-      - echo Build started on `date`
-      - echo Compiling the Node.js code
-      - npm install
-      - npm run build
-      - npm start
-      
-  post_build:
-    commands:
-      - echo Build completed on `date`
-# Include only the files required for your application to run.
-# Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
-# used only for building and testing.
+      - echo Building...
+      - yarn --cwd mern-demo-crud-app-frontend run build
 artifacts:
   files:
     - '**/*'
-    - public/**/*
-    - src/**/*
-    - package.json
-    - scripts/**/*
-  base-directory: 'Qwings-deploy/mern-crud-app-backend'
+  discard-paths: no
+  base-directory: mern-demo-crud-app-frontend/build
