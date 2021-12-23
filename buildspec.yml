@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - echo Installing Node 14...
-      - apt install -y nodejs
+      - yarn install -y nodejs
       - echo Installing Yarn...
       - apt install --no-install-recommends yarn
   pre_build:
