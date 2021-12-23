@@ -18,13 +18,14 @@ phases:
     commands:
       - echo Building...
       - yarn --cwd mern-demo-crud-app-frontend run build
-      - yarn --cwd mern-demo-crud-app-frontend npm start
+      - yarn --cwd mern-demo-crud-app-frontend start
   post_build:
     commands:
-      - yarn --cwd mern-demo-crud-app-backend npm start
+      - yarn --cwd mern-demo-crud-app-backend start
 artifacts:
   files:
     - '**/*'
     - package.json
+    - 
   discard-paths: yes
-  base-directory: mern-demo-crud-app-frontend/build
+  base-directory: mern-demo-crud-app-backend/server.js
