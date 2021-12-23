@@ -1,14 +1,22 @@
 version: 0.2
+
 phases:
+  install:
+    commands:
+      - echo Installing Node 14...
+      
+      - apt install -y nodejs
+      - echo Installing Yarn...
+      
+      - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+      - apt install --no-install-recommends yarn
   pre_build:
     commands:
-      - echo Installing source NPM dependencies...
-      - npm install joi
+      - echo Installing root dependencies
+      - yarn install
+      - echo Installing frontend dependencies
+      - yarn --cwd mern-demo-crud-app-frontend install
   build:
     commands:
-      - echo Build started on `date`
-      - echo Compiling the dist folder
-      - npm run build
-  post_build:
-    commands:
-      - echo Build completed on `date`
+      - echo Building...
+      - yarn --cwd mern-demo-crud-app-frontend run build
