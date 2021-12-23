@@ -17,5 +17,4 @@ phases:
     commands:
       - echo Building...
       - yarn --cwd mern-demo-crud-app-frontend run build
-  
-  base-directory: frontend/build
+    base-directory: mern-demo-crud-app-frontend/build
