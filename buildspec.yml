@@ -20,4 +20,4 @@ artifacts:
   files:
     - '**/*'
   discard-paths: no
-  base-directory: mern-demo-crud-app-frontend/build
+  base-directory: code-build-pipeline/index.html
