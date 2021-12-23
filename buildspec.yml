@@ -1,23 +1,23 @@
 version: 0.2
-
 phases:
-  install:
-    commands:
-      - echo Installing Node 14..
-      - yarn install -y nodejs
-      - echo Installing Yarn..
-      - yarn install --no-install-recommends yarn
   pre_build:
     commands:
-      - echo Installing root dependencies
-      - yarn install
-      - echo Installing frontend dependencies
-      
+      - echo Installing source NPM dependencies...
+      - npm install
   build:
     commands:
-      - echo Building...
+      - echo Build started on `date`
+      - echo Compiling the dist folder
+      - npm run-script build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+# Include only the files required for your application to run.
 artifacts:
   files:
+    - index.js
     - '**/*'
-  discard-paths: no
-  base-directory: code-build-pipeline/index.html
+    - dist/**/*
+    - request-map.js
+    - package.json
+    - node_modules/**/*
