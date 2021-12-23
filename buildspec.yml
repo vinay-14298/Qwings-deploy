@@ -14,14 +14,12 @@ phases:
       - echo Installing frontend dependencies
       - yarn --cwd mern-demo-crud-app-frontend install
       - yarn --cwd mern-demo-crud-app-backend install
+      - yarn --cwd mern-demo-crud-app-backend start
   build:
     commands:
       - echo Building...
       - yarn --cwd mern-demo-crud-app-frontend run build
       - yarn --cwd mern-demo-crud-app-frontend start
-  post_build:
-    commands:
-      - yarn --cwd mern-demo-crud-app-backend start
 artifacts:
   files:
     - '**/*'
