@@ -26,4 +26,4 @@ artifacts:
     - package.json
     - 
   discard-paths: yes
-  base-directory: mern-demo-crud-app-backend/server.js
+  base-directory: mern-demo-crud-app-frontend/build
