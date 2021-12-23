@@ -6,9 +6,7 @@ phases:
       - echo Installing Node 14...
       - curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
       - apt install -y nodejs
-      - echo Installing Yarn...
-      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-      - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+      - echo Installing Yarn..
       - apt install --no-install-recommends yarn
   pre_build:
     commands:
