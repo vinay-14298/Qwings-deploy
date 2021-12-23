@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Installing Node 14...
       
-      - apt install nodejs 
+      - yarn install nodejs 
       - echo Installing Yarn...
       
       - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
